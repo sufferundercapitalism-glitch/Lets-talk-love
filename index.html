@@ -17,26 +17,36 @@
     <h1>For My Girl 💗</h1>
     <p>A place where our time and memories live</p>
   </header>
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Time 💗</title>
 
-  <!-- TIMER SECTION -->
-  <section class="timer-section">
-    <h2>⏳ Time Since We Met</h2>
-    <div id="timer">Loading...</div>
-    <p class="timer-note">And I still choose you every second.</p>
-  </section>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-  <!-- PLACEHOLDER: MEMORIES -->
-  <section class="memories-section">
-    <h2>📸 Our Memories</h2>
-    <p>This is where we will keep our favorite moments.</p>
-  </section>
+  <div class="container">
 
-  <!-- PLACEHOLDER: HER COLUMN -->
-  <section class="column-section">
-    <h2>📰 Manoola Column</h2>
-    <p>Her thoughts, her days, her words.</p>
-  </section>
+    <h1>Our Time 💕</h1>
+    <p class="subtitle">When did our story begin?</p>
 
+    <input type="date" id="dateInput" />
+    <button onclick="saveDate()">Start the timer</button>
+
+    <div id="timer" class="timer hidden"></div>
+
+    <p class="note">Every second since then… 🤍</p>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+  
   <footer>
     <p> from ahmed to manoola with love  🤍</p>
   </footer>
