@@ -29,7 +29,7 @@ function updateTimer() {
     `${days} days · ${hours} hours · ${minutes} minutes · ${seconds} seconds`;
 }
 
-// Load saved date if exists
+// Load saved date
 const savedDate = localStorage.getItem("loveStartDate");
 if (savedDate) {
   startDate = new Date(savedDate);
