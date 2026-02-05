@@ -1,7 +1,22 @@
-// ⚠️ CHANGE THIS DATE TO THE DAY WE MET
-const startDate = new Date("2023-06-01T00:00:00");
+let startDate = null;
+
+function saveDate() {
+  const input = document.getElementById("dateInput").value;
+
+  if (!input) {
+    alert("Please select the date 💗");
+    return;
+  }
+
+  localStorage.setItem("loveStartDate", input);
+  startDate = new Date(input);
+  document.getElementById("timer").classList.remove("hidden");
+  updateTimer();
+}
 
 function updateTimer() {
+  if (!startDate) return;
+
   const now = new Date();
   let diff = now - startDate;
 
@@ -14,6 +29,13 @@ function updateTimer() {
     `${days} days · ${hours} hours · ${minutes} minutes · ${seconds} seconds`;
 }
 
-setInterval(updateTimer, 1000);
-updateTimer();
+// Load saved date if exists
+const savedDate = localStorage.getItem("loveStartDate");
+if (savedDate) {
+  startDate = new Date(savedDate);
+  document.getElementById("dateInput").value = savedDate;
+  document.getElementById("timer").classList.remove("hidden");
+  updateTimer();
+}
 
+setInterval(updateTimer, 1000);
