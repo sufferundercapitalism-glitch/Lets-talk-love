@@ -4,74 +4,120 @@
 
 body {
   margin: 0;
-  height: 100vh;
-  background: linear-gradient(180deg, #ffe4ec, #fff0f6);
+  min-height: 100vh;
   font-family: 'Poppins', sans-serif;
+  background: linear-gradient(
+    180deg,
+    #fde7ef 0%,
+    #fff6fa 70%
+  );
+  color: #4a2c3a;
+}
+
+.page {
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+.top {
+  padding: 40px 20px 10px;
+  text-align: center;
+}
+
+.top h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  margin-bottom: 5px;
+}
+
+.tagline {
+  color: #7a4b5c;
+  font-size: 0.95rem;
+}
+
+/* CENTER TIMER */
+.center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #5a2a44;
-}
-
-.container {
-  background: #ffffff;
-  padding: 40px 30px;
-  border-radius: 25px;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  width: 90%;
-  max-width: 400px;
 }
 
-h1 {
+.center h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.2rem;
-  margin-bottom: 10px;
+  font-size: 1.8rem;
+  margin-bottom: 5px;
 }
 
-.subtitle {
+.question {
+  font-size: 0.9rem;
   margin-bottom: 20px;
-  font-size: 1rem;
+  color: #7a4b5c;
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 input[type="date"] {
-  padding: 10px;
-  border-radius: 12px;
-  border: 1px solid #f4a6c1;
-  font-size: 1rem;
-  margin-bottom: 15px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  border: 1px solid #e8a2bf;
+  font-size: 0.95rem;
 }
 
 button {
-  background: #f4a6c1;
-  border: none;
   padding: 10px 20px;
   border-radius: 20px;
-  font-size: 1rem;
+  border: none;
+  background: #e8a2bf;
   color: white;
   cursor: pointer;
-  transition: 0.3s;
+  font-size: 0.95rem;
 }
 
 button:hover {
-  background: #e78bb0;
+  opacity: 0.9;
 }
 
 .timer {
-  margin-top: 25px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  background: #fff5f8;
-  padding: 15px;
-  border-radius: 15px;
+  background: white;
+  padding: 18px 28px;
+  border-radius: 30px;
+  font-size: 1.15rem;
+  font-weight: 500;
+  box-shadow: 0 15px 35px rgba(232,162,191,0.25);
 }
 
 .note {
   margin-top: 10px;
+  font-size: 0.85rem;
   font-style: italic;
-  font-size: 0.9rem;
+  color: #7a4b5c;
 }
 
 .hidden {
   display: none;
+}
+
+/* POETRY */
+.poetry {
+  padding: 60px 25px 80px;
+}
+
+.poem {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  line-height: 1.9;
+  font-size: 1.05rem;
+  color: #5a2a44;
+  opacity: 0.85;
 }
